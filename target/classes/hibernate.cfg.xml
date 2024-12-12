@@ -1,0 +1,12 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración JDBC para SQLite -->
+        <property name="hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:src/main/resources/company_database.db</property> <!-- Ruta de la base de datos -->
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- Crea/actualiza las tablas automáticamente -->
+        <property name="hibernate.show_sql">true</property> <!-- Muestra las consultas SQL en la consola -->
+        <property name="hibernate.format_sql">true</property> <!-- Da formato a las consultas -->
+        <property name="hibernate.current_session_context_class">thread</property>
+    </session-factory>
+</hibernate-configuration>
